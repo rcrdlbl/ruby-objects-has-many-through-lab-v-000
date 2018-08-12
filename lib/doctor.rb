@@ -20,4 +20,8 @@ class Doctor
     apt.select {|appointment| appointment.doctor == self}
   end
 
+  def patients
+    self.appointments.collect {|apt| apt.patient}
+  end
+
 end
