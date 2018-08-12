@@ -11,6 +11,7 @@ class Patient
   end
 
   def appointments
-
+    apt = Appointment.all
+    apt.select {|appointment| appointment.patient == self}
   end
 end
